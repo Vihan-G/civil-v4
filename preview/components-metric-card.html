@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Data Card — Metric</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:20px; background:var(--surface); display:grid; grid-template-columns:repeat(3,1fr); gap:12px;}
+  .card { background:#f5f4eb; padding:16px; display:flex; flex-direction:column; justify-content:space-between; height:118px;}
+  .card.hi { background:#e9e9dc; border-left:2px solid #006a6a; }
+  .k { font-family:var(--font-label); font-size:10px; text-transform:uppercase; letter-spacing:.14em; color:var(--on-surface-variant); font-weight:600;}
+  .v { font-family:var(--font-headline); font-weight:700; font-size:32px; letter-spacing:-.02em; color:#313429; line-height:1;}
+  .u { font-family:var(--font-label); font-size:10px; text-transform:uppercase; letter-spacing:.14em; color:var(--on-surface-variant); margin-left:4px;}
+  .pulse{ width:6px; height:6px; border-radius:50%; background:#006a6a; animation: p 1.8s infinite;}
+  @keyframes p { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .row{ display:flex; align-items:center; gap:8px;}
+</style></head>
+<body>
+  <div class="card"><div class="k">Avg. Confidence</div><div><span class="v">94.2</span><span class="u">%</span></div></div>
+  <div class="card"><div class="k">Storage Util.</div><div><span class="v">68</span><span class="u">GB</span></div></div>
+  <div class="card hi"><div class="k" style="color:#006a6a">System Status</div><div class="row"><span class="pulse"></span><span class="v" style="font-size:22px;font-weight:500">Optimal</span></div></div>
+</body></html>

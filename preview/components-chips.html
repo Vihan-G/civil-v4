@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Status Chips</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:22px; background:var(--surface); display:flex; flex-wrap:wrap; gap:8px; align-items:center;}
+  .chip { font-family:var(--font-label); font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.14em; padding:4px 10px; border-radius:2px; display:inline-flex; align-items:center; gap:6px;}
+  .teal   { background:rgba(0,106,106,.10);  color:#006a6a; }
+  .purple { background:rgba(106,76,147,.10); color:#6a4c93; }
+  .pink   { background:rgba(181,84,140,.10); color:#b5548c; }
+  .coral  { background:rgba(194,97,91,.10);  color:#c2615b; }
+  .blue   { background:rgba(60,110,145,.10); color:#3c6e91; }
+  .err    { background:rgba(159,64,61,.10); color:#9f403d; }
+  .ok     { background:rgba(74,124,89,.12); color:#4a7c59; }
+  .warn   { background:rgba(184,132,43,.12); color:#b8842b; }
+  .dot { width:6px; height:6px; border-radius:50%; background:currentColor; }
+</style></head>
+<body>
+  <span class="chip teal"><span class="dot"></span>Verified · L1–L4</span>
+  <span class="chip purple">Void Plate</span>
+  <span class="chip pink">Flow Corridor</span>
+  <span class="chip coral">Transfer Risk</span>
+  <span class="chip blue">Metadata</span>
+  <span class="chip ok">Complete</span>
+  <span class="chip warn">Processing</span>
+  <span class="chip err">Needs Review</span>
+</body></html>

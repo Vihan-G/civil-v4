@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Inputs</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:20px; background:var(--surface); display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  .field { display:flex; flex-direction:column; gap:6px; }
+  label { font-family:var(--font-label); font-size:10px; text-transform:uppercase; letter-spacing:.14em; color:var(--on-surface-variant);}
+  input { background:transparent; border:none; border-bottom:.5px solid #7a7c6f; padding:8px 0; font-family:var(--font-body); font-size:14px; color:#313429; outline:none;}
+  input:focus { border-bottom-color:#313429; border-bottom-width:1px;}
+  .err input { border-bottom-color:#9f403d; }
+  .help { font-family:var(--font-label); font-size:11px; color:var(--on-surface-variant);}
+  .err .help { color:#9f403d; }
+  .search { display:flex; align-items:center; background:#f5f4eb; padding:8px 12px; border-radius:2px;}
+  .search .material-symbols-outlined { font-size:16px; color:#5f5e5e; margin-right:8px;}
+  .search input { border-bottom:none; padding:0; }
+</style></head>
+<body>
+  <div class="field"><label>Grid System</label><input value="Orthogonal 10×10m"><div class="help">Bottom-stroke input · 0.5px outline</div></div>
+  <div class="field err"><label>Load Factor</label><input value="1.6e"><div class="help">Expected numeric value (e.g. 1.65)</div></div>
+  <div class="field"><label>Search</label><div class="search"><span class="material-symbols-outlined">search</span><input value="Nexus Spine..."></div></div>
+  <div class="field"><label>Disabled</label><input disabled value="Auto-calculated" style="opacity:.4"><div class="help">Read from source</div></div>
+</body></html>

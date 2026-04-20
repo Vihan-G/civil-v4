@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:20px; background:var(--surface); display:flex; gap:14px; flex-wrap:wrap; align-items:center;}
+  .btn { font-family:var(--font-headline); font-size:13px; font-weight:500; padding:10px 18px; border-radius:2px; cursor:pointer; border:none; display:inline-flex; align-items:center; gap:8px; transition:all 120ms cubic-bezier(.2,0,0,1);}
+  .primary { background:#5f5e5e; color:#faf7f6; }
+  .primary:hover { background:#535252; }
+  .ghost { background:transparent; color:#313429; outline:.5px solid rgba(178,179,165,.4); outline-offset:-0.5px;}
+  .ghost:hover { background:#e9e9dc; }
+  .text { background:transparent; color:#5f5e5e; padding:10px 4px; }
+  .text:hover { color:#313429; }
+  .term { background:#5f5e5e; color:#faf7f6; font-family:var(--font-label); font-size:10px; font-weight:700; letter-spacing:.2em; padding:10px 18px; }
+  .material-symbols-outlined { font-size:16px !important; }
+</style></head>
+<body>
+  <button class="btn primary"><span class="material-symbols-outlined">add</span>New Project</button>
+  <button class="btn ghost">Cancel</button>
+  <button class="btn text">Learn more →</button>
+  <button class="btn term">NEW_CALCULATION</button>
+</body></html>

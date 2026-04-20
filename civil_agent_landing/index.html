@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Civil Agent — Preliminary structural design, in minutes.</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #fbf9f2; color: #313429; }
+  body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: inherit; }
+  ::selection { background: rgba(0,106,106,.18); }
+
+  /* Tweaks panel */
+  .tweaks-panel {
+    position: fixed; right: 24px; bottom: 24px; z-index: 100;
+    background: rgba(251,249,242,.96);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 0.5px solid rgba(49,52,41,.15);
+    box-shadow: 0 28px 32px -12px rgba(49,52,41,.08);
+    padding: 20px 22px; width: 280px;
+    display: none;
+    font-family: 'Inter', sans-serif; font-size: 12px;
+  }
+  .tweaks-panel.active { display: block; }
+  .tweaks-panel h4 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600;
+    margin: 0 0 16px; color: #313429;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tweaks-panel h4::before {
+    content: ''; width: 6px; height: 6px; background: #006a6a; display: inline-block;
+  }
+  .tweak-row { margin-bottom: 18px; }
+  .tweak-row:last-child { margin-bottom: 0; }
+  .tweak-row .tweak-label {
+    font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .14em;
+    color: #5e6054; margin-bottom: 8px; display: block;
+  }
+  .seg {
+    display: inline-flex; background: #efeee3; padding: 2px;
+    border: 0.5px solid rgba(49,52,41,.10); width: 100%;
+  }
+  .seg button {
+    flex: 1; background: transparent; border: none;
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .12em;
+    padding: 7px 8px; cursor: pointer; color: #5e6054;
+    transition: all 120ms cubic-bezier(.2,0,0,1);
+  }
+  .seg button.on { background: #313429; color: #faf7f6; }
+
+  .switch { display: flex; justify-content: space-between; align-items: center; }
+  .switch-track {
+    width: 32px; height: 18px; background: #d6d4c6;
+    border-radius: 10px; position: relative; cursor: pointer;
+    transition: background 120ms cubic-bezier(.2,0,0,1);
+  }
+  .switch-track.on { background: #006a6a; }
+  .switch-track::after {
+    content: ''; position: absolute; top: 2px; left: 2px;
+    width: 14px; height: 14px; background: #faf7f6; border-radius: 50%;
+    transition: transform 120ms cubic-bezier(.2,0,0,1);
+  }
+  .switch-track.on::after { transform: translateX(14px); }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "material": "Steel",
+  "audience": "architect",
+  "showPipeline": true,
+  "heroVariant": "isometric"
+}/*EDITMODE-END*/;
+window.__tweaks = { ...TWEAK_DEFAULTS };
+</script>
+
+<script type="text/babel" src="Atoms.jsx"></script>
+<script type="text/babel" src="Hero.jsx"></script>
+<script type="text/babel" src="Sections.jsx"></script>
+
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+function App() {
+  const [tweaks, setTweaks] = useState(window.__tweaks);
+  const [editMode, setEditMode] = useState(false);
+
+  const setTweak = (k, v) => {
+    const next = { ...tweaks, [k]: v };
+    setTweaks(next);
+    window.__tweaks = next;
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [k]: v } }, '*');
+  };
+
+  useEffect(() => {
+    const onMsg = (e) => {
+      const d = e.data;
+      if (!d || typeof d !== 'object') return;
+      if (d.type === '__activate_edit_mode') setEditMode(true);
+      if (d.type === '__deactivate_edit_mode') setEditMode(false);
+    };
+    window.addEventListener('message', onMsg);
+    // Announce availability AFTER listener is registered
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', onMsg);
+  }, []);
+
+  const { material, audience, showPipeline, heroVariant } = tweaks;
+
+  return (
+    <div data-screen-label="Civil Agent landing">
+      <TopBar />
+      <Hero
+        material={material}
+        setMaterial={(m) => setTweak('material', m)}
+        audience={audience}
+        variant={heroVariant}
+      />
+      {showPipeline && <HowItWorks material={material} />}
+      <LivePreview />
+      <FAQ />
+      <FinalCTA material={material} />
+      <Footer />
+
+      {/* Tweaks panel */}
+      <div className={`tweaks-panel ${editMode ? 'active' : ''}`}>
+        <h4>Tweaks</h4>
+
+        <div className="tweak-row">
+          <span className="tweak-label">Featured material</span>
+          <div className="seg">
+            {['RC', 'Steel'].map(m => (
+              <button key={m} className={material === m ? 'on' : ''} onClick={() => setTweak('material', m)}>{m}</button>
+            ))}
+          </div>
+        </div>
+
+        <div className="tweak-row">
+          <span className="tweak-label">Audience voice</span>
+          <div className="seg">
+            {[['engineer', 'Engineer'], ['architect', 'Architect']].map(([k, l]) => (
+              <button key={k} className={audience === k ? 'on' : ''} onClick={() => setTweak('audience', k)}>{l}</button>
+            ))}
+          </div>
+        </div>
+
+        <div className="tweak-row">
+          <div className="switch">
+            <span className="tweak-label" style={{ margin: 0 }}>How-it-works section</span>
+            <div className={`switch-track ${showPipeline ? 'on' : ''}`} onClick={() => setTweak('showPipeline', !showPipeline)} />
+          </div>
+        </div>
+
+        <div className="tweak-row" style={{ paddingTop: 14, borderTop: '0.5px solid rgba(49,52,41,.12)' }}>
+          <span className="tweak-label">Hero variant</span>
+          <div className="seg">
+            {[['isometric', 'Iso'], ['type', 'Type-only']].map(([k, l]) => (
+              <button key={k} className={heroVariant === k ? 'on' : ''} onClick={() => setTweak('heroVariant', k)}>{l}</button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

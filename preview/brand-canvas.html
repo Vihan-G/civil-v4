@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Canvas Motif</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:0;background:#fbf9f2;}
+  .canvas{
+    height:180px;
+    background-image:
+      linear-gradient(to right, rgba(49,52,41,.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(49,52,41,.05) 1px, transparent 1px);
+    background-size:40px 40px;
+    position:relative;
+  }
+  .label{position:absolute;bottom:12px;left:16px;font-family:var(--font-label);font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--on-surface-variant);}
+  .key{position:absolute;top:12px;right:16px;font-family:var(--font-mono);font-size:10px;color:var(--on-surface-variant);}
+  .zone{position:absolute; top:30px; left:60px; right:60px; bottom:40px; background:rgba(0,106,106,.05); outline:1.5px dashed rgba(0,106,106,.5);}
+  .zone-lbl{position:absolute;top:8px;left:10px;font-family:var(--font-headline);font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#006a6a;font-weight:600;}
+  .dot{width:8px;height:8px;border-radius:50%;position:absolute;box-shadow:0 0 0 .5px #313429 inset;}
+</style></head>
+<body>
+<div class="canvas">
+  <div class="zone"><div class="zone-lbl">Primary Core</div></div>
+  <div class="dot" style="background:#4a7c59;top:28px;left:56px"></div>
+  <div class="dot" style="background:#4a7c59;top:28px;right:56px"></div>
+  <div class="dot" style="background:#b8842b;top:80px;left:180px"></div>
+  <div class="dot" style="background:#9f403d;top:28px;left:50%"></div>
+  <div class="label">Drafting Canvas · 40px Orthogonal Grid</div>
+  <div class="key">GRID: 10×10m</div>
+</div>
+</body></html>

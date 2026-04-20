@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Nav Item States</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:0; background:#f5f4eb; }
+  .col { display:flex; flex-direction:column; }
+  a { display:flex; align-items:center; gap:12px; padding:12px 22px; font-family:var(--font-label); font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#5f5e5e; text-decoration:none; }
+  a.active { color:#313429; font-weight:700; background:#fbf9f2; box-shadow: inset 4px 0 0 0 #313429; }
+  a.hover  { background: rgba(251,249,242,.5); }
+  .material-symbols-outlined { font-size:18px !important; }
+</style></head>
+<body>
+<div class="col">
+  <a><span class="material-symbols-outlined">dashboard</span>Dashboard</a>
+  <a class="hover"><span class="material-symbols-outlined">edit_document</span>Input Form · hover</a>
+  <a class="active"><span class="material-symbols-outlined">account_tree</span>Building Graph · active</a>
+  <a><span class="material-symbols-outlined">grid_view</span>Structural Zones</a>
+</div>
+</body></html>

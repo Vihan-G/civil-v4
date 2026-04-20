@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Type — Big & Small Pairing</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:20px; background:var(--surface-container-low); }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .cell { background:var(--surface); padding:16px; }
+  .metric { font-family:var(--font-headline); font-size:42px; font-weight:700; letter-spacing:-.02em; color:var(--on-surface); line-height:1; }
+  .metric .u { font-size:14px; font-weight:500; color:var(--secondary); margin-left:4px; }
+  .descriptor { font-family:var(--font-label); font-size:10px; text-transform:uppercase; letter-spacing:.14em; color:var(--on-surface-variant); margin-top:8px; }
+</style></head>
+<body>
+<div class="grid">
+  <div class="cell"><div class="metric">94.2<span class="u">%</span></div><div class="descriptor">Avg. Confidence</div></div>
+  <div class="cell"><div class="metric">12<span class="u" style="color:var(--on-surface-variant)">nodes</span></div><div class="descriptor">Processing Load</div></div>
+  <div class="cell"><div class="metric">0.992</div><div class="descriptor">Phase 2 Conf.</div></div>
+</div>
+</body></html>

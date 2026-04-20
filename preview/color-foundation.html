@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Color — Foundation</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:20px; background:var(--surface); }
+  .row { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; }
+  .sw { aspect-ratio: 1.4/1; display:flex; flex-direction:column; justify-content:flex-end; padding:10px; }
+  .sw .name { font-family:var(--font-label); font-size:10px; text-transform:uppercase; letter-spacing:.14em; }
+  .sw .hex  { font-family:var(--font-mono); font-size:10px; opacity:.7; margin-top:2px; }
+  .dark .name, .dark .hex { color:#faf7f6; }
+  .light .name, .light .hex { color:#313429; }
+</style></head>
+<body>
+<div class="row">
+  <div class="sw light" style="background:#ffffff;outline:.5px solid rgba(49,52,41,.1);outline-offset:-1px;"><div class="name">white</div><div class="hex">#ffffff</div></div>
+  <div class="sw light" style="background:#f2f0e8;"><div class="name">surface</div><div class="hex">#f2f0e8</div></div>
+  <div class="sw light" style="background:#e3e4d4;"><div class="name">highest</div><div class="hex">#e3e4d4</div></div>
+  <div class="sw dark"  style="background:#313429;"><div class="name">on-surface</div><div class="hex">#313429</div></div>
+  <div class="sw dark"  style="background:#0e0f0b;"><div class="name">inverse</div><div class="hex">#0e0f0b</div></div>
+</div>
+</body></html>

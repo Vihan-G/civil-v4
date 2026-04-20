@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Elevation — Tonal Layering</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:24px; background:var(--surface); }
+  .stack { position:relative; height:120px; }
+  .sheet { position:absolute; padding:14px; font-family:var(--font-label); font-size:10px; text-transform:uppercase; letter-spacing:.14em; color:var(--on-surface-variant); }
+  .l0 { inset:0 0 0 0; background:#fbf9f2; }
+  .l1 { inset:16px 40px 20px 40px; background:#f5f4eb; }
+  .l2 { inset:32px 80px 40px 80px; background:#e9e9dc; box-shadow:0 24px 32px -12px rgba(49,52,41,.04); }
+  .key { position:absolute; right:24px; bottom:24px; font-family:var(--font-mono); font-size:10px; color:var(--on-surface-variant); text-align:right; line-height:1.6; text-transform:none; letter-spacing:0; }
+</style></head>
+<body>
+<div class="stack">
+  <div class="sheet l0">Level 0 · Surface (the desk)</div>
+  <div class="sheet l1">Level 1 · Container-low (drawing board)</div>
+  <div class="sheet l2">Level 2 · Highest (active component)</div>
+</div>
+<div class="key">Shadow: 24–32px blur @ 4% charcoal<br/>No software-generic drop shadows</div>
+</body></html>

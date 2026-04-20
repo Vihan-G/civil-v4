@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Confidence Semantics</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:22px; background:var(--surface); }
+  .row { display:flex; flex-direction:column; gap:18px; }
+  .lvl { display:grid; grid-template-columns:90px 1fr 60px; gap:16px; align-items:center; }
+  .tag { font-family:var(--font-label); font-size:11px; text-transform:uppercase; letter-spacing:.14em; color:var(--on-surface-variant); }
+  .bar { height:4px; background:var(--surface-container-highest); }
+  .fill { height:100%; }
+  .val { font-family:var(--font-headline); font-weight:700; font-size:18px; color:var(--on-surface); text-align:right; letter-spacing:-.01em; }
+  .grad { height:4px; background:linear-gradient(to right,#9f403d 0%, #b8842b 50%, #4a7c59 100%); margin-top:4px; }
+</style></head>
+<body>
+<div class="row">
+  <div class="lvl"><div class="tag">Verified</div><div class="bar"><div class="fill" style="width:96%;background:#4a7c59"></div></div><div class="val">0.96</div></div>
+  <div class="lvl"><div class="tag">Review</div><div class="bar"><div class="fill" style="width:62%;background:#b8842b"></div></div><div class="val">0.62</div></div>
+  <div class="lvl"><div class="tag">Risk</div><div class="bar"><div class="fill" style="width:28%;background:#9f403d"></div></div><div class="val">0.28</div></div>
+  <div class="lvl"><div class="tag">Gradient</div><div class="grad"></div><div class="val" style="opacity:.4">R→A→G</div></div>
+</div>
+</body></html>
