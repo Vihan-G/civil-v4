@@ -5,7 +5,8 @@ import {
   HERO_TITLE,
   HOW_IT_WORKS_BODY,
   HOW_IT_WORKS_STEPS,
-  HOW_IT_WORKS_TITLE
+  HOW_IT_WORKS_TITLE,
+  WORKFLOW_PHASE_COPY
 } from "./landing-copy";
 
 describe("landing copy", () => {
@@ -38,5 +39,24 @@ describe("landing copy", () => {
       "Compare schemes side by side.",
       "Hand off, not hand over."
     ]);
+  });
+
+  test("defines a separate workflow copy map for import/declare/compare/handoff", () => {
+    expect(WORKFLOW_PHASE_COPY.import).toEqual({
+      body: "Bring in floor plates, cores, and voids from Rhino, Revit, or IFC. Civil Agent parses the geometry into a Building Graph of bays, spans, and tributary areas.",
+      eyebrow: "IMPORT"
+    });
+    expect(WORKFLOW_PHASE_COPY.declare).toEqual({
+      body: "Material system, target floor-to-floor, seismic zone, wind zone, and code jurisdiction become solver constraints before member sizing starts.",
+      eyebrow: "DECLARE"
+    });
+    expect(WORKFLOW_PHASE_COPY.compare).toEqual({
+      body: "Physics based iteration searches grid spacing, lateral system, and structural depth. Every scheme carries confidence against code and cost.",
+      eyebrow: "COMPARE"
+    });
+    expect(WORKFLOW_PHASE_COPY.handoff).toEqual({
+      body: "Export a structured report with member schedules, load tables, design notes, and a live link back to the graph.",
+      eyebrow: "HANDOFF"
+    });
   });
 });

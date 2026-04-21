@@ -61,3 +61,26 @@ export const HOW_IT_WORKS_STEPS = [
     annotation: ".pdf / .ifc / live link"
   }
 ] as const;
+
+export const WORKFLOW_PHASE_COPY = {
+  compare: {
+    body:
+      "Physics based iteration searches grid spacing, lateral system, and structural depth. Every scheme carries confidence against code and cost.",
+    eyebrow: "COMPARE"
+  },
+  declare: {
+    body:
+      "Material system, target floor-to-floor, seismic zone, wind zone, and code jurisdiction become solver constraints before member sizing starts.",
+    eyebrow: "DECLARE"
+  },
+  handoff: {
+    body:
+      "Export a structured report with member schedules, load tables, design notes, and a live link back to the graph.",
+    eyebrow: "HANDOFF"
+  },
+  import: {
+    body:
+      "Bring in floor plates, cores, and voids from Rhino, Revit, or IFC. Civil Agent parses the geometry into a Building Graph of bays, spans, and tributary areas.",
+    eyebrow: "IMPORT"
+  }
+} as const;

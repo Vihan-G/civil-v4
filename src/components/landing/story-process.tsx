@@ -7,8 +7,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   HOW_IT_WORKS_BODY,
-  HOW_IT_WORKS_STEPS,
-  HOW_IT_WORKS_TITLE
+  HOW_IT_WORKS_TITLE,
+  WORKFLOW_PHASE_COPY
 } from "@/lib/landing-copy";
 import { useDebugFlags } from "@/hooks/use-debug-flags";
 import {
@@ -18,7 +18,8 @@ import {
 
 const TILE_HEIGHT = 447;
 const STACK_HEADROOM = 80;
-const STACK_RESTING_OFFSET = 14;
+const STACK_RESTING_OFFSET = 18;
+const STACK_CAP_OFFSET = -180;
 const STACK_CONTAINER_HEIGHT = TILE_HEIGHT + STACK_RESTING_OFFSET * 4 + STACK_HEADROOM;
 const STACK_TOP_INSET = STACK_HEADROOM;
 const ACTIVE_STEP_KEY = "import";
@@ -29,7 +30,7 @@ const STACK_LAYERS = [
     height: 1118,
     key: "import",
     src: "/how-it-works/tile-01-import.png",
-    translateY: 56,
+    translateY: STACK_RESTING_OFFSET * 4,
     width: 1400,
     zIndex: 1
   },
@@ -38,7 +39,7 @@ const STACK_LAYERS = [
     height: 1118,
     key: "declare",
     src: "/how-it-works/tile-02-declare.png",
-    translateY: 42,
+    translateY: STACK_RESTING_OFFSET * 3,
     width: 1400,
     zIndex: 2
   },
@@ -47,7 +48,7 @@ const STACK_LAYERS = [
     height: 1118,
     key: "compare",
     src: "/how-it-works/tile-03-compare.png",
-    translateY: 28,
+    translateY: STACK_RESTING_OFFSET * 2,
     width: 1400,
     zIndex: 3
   },
@@ -56,7 +57,7 @@ const STACK_LAYERS = [
     height: 1118,
     key: "handoff",
     src: "/how-it-works/tile-04-handoff.png",
-    translateY: 14,
+    translateY: STACK_RESTING_OFFSET,
     width: 1400,
     zIndex: 4
   },
@@ -65,7 +66,7 @@ const STACK_LAYERS = [
     height: 896,
     key: "top-cap",
     src: "/how-it-works/top-cap.png",
-    translateY: 0,
+    translateY: STACK_CAP_OFFSET,
     width: 1190,
     zIndex: 5
   }
@@ -94,13 +95,6 @@ const WORKFLOW_LABELS = [
   }
 ] as const;
 
-const WORKFLOW_STEP_MAP = {
-  compare: HOW_IT_WORKS_STEPS[2],
-  declare: HOW_IT_WORKS_STEPS[1],
-  handoff: HOW_IT_WORKS_STEPS[3],
-  import: HOW_IT_WORKS_STEPS[0]
-} as const satisfies Record<WorkflowPhase, (typeof HOW_IT_WORKS_STEPS)[number]>;
-
 export function StoryProcess() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const pinRef = useRef<HTMLDivElement>(null);
@@ -114,7 +108,7 @@ export function StoryProcess() {
   const lineDrawDuration = debugFlags.fastTransitions ? 0.14 : 0.32;
   const dotDelay = debugFlags.fastTransitions ? 0.14 : 0.32;
   const dotDuration = debugFlags.fastTransitions ? 0.06 : 0.2;
-  const currentStep = WORKFLOW_STEP_MAP[activePhase];
+  const currentStep = WORKFLOW_PHASE_COPY[activePhase];
 
   useEffect(() => {
     const desktop = window.matchMedia("(min-width: 1024px)");
@@ -142,7 +136,7 @@ export function StoryProcess() {
     gsap.registerPlugin(ScrollTrigger);
 
     const context = gsap.context(() => {
-      const trigger = ScrollTrigger.create({
+      ScrollTrigger.create({
         anticipatePin: 1,
         end: "+=300%",
         id: "workflow-stack",
@@ -164,8 +158,6 @@ export function StoryProcess() {
         start: "top top",
         trigger: scrollRef.current
       });
-
-      console.log("pin registered", trigger.trigger);
     }, scrollRef);
 
     return () => context.revert();
@@ -173,16 +165,71 @@ export function StoryProcess() {
 
   return (
     <section className="bg-bg text-fg" id="how-it-works">
-      <div className="mx-auto max-w-[1280px] px-5 pb-[64px] pt-24 sm:px-6 sm:pt-28 lg:px-6 lg:pb-[64px] lg:pt-24">
-        <p className="font-mono text-[12px] font-medium uppercase tracking-[0.12em] text-fg-muted">
-          CHAPTER 02 / 05 — HOW IT WORKS
-        </p>
-        <h2 className="mt-6 max-w-[11ch] font-headline text-[clamp(40px,4.5vw,64px)] font-semibold leading-[1.02] tracking-[-0.02em] text-fg">
-          {HOW_IT_WORKS_TITLE}
-        </h2>
-        <p className="mt-6 max-w-[680px] font-body text-[18px] leading-[1.55] text-fg-muted">
-          {HOW_IT_WORKS_BODY}
-        </p>
+      <div className="mx-auto max-w-[1280px] px-5 pb-[32px] pt-12 sm:px-6 sm:pt-16 lg:px-6 lg:pb-[32px] lg:pt-12">
+        <div className="lg:grid lg:grid-cols-[55%_45%] lg:items-center lg:gap-12">
+          <div>
+            <p className="font-mono text-[12px] font-medium uppercase tracking-[0.12em] text-fg-muted">
+              CHAPTER 02 / 05 — HOW IT WORKS
+            </p>
+            <h2 className="mt-6 max-w-[11ch] font-headline text-[clamp(40px,4.5vw,64px)] font-semibold leading-[1.02] tracking-[-0.02em] text-fg">
+              {HOW_IT_WORKS_TITLE}
+            </h2>
+            <p className="mt-6 max-w-[680px] font-body text-[18px] leading-[1.55] text-fg-muted">
+              {HOW_IT_WORKS_BODY}
+            </p>
+          </div>
+
+          <motion.aside
+            className="mt-12 lg:ml-12 lg:mt-0 lg:justify-self-start"
+            initial={{ opacity: 0, y: 16 }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ amount: 0.2, once: true }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <div className="max-w-[480px] rounded-[var(--radius-lg)] border border-border bg-bg-elev p-8">
+              <div>
+                <p className="font-mono text-[14px] font-medium uppercase tracking-[0.12em] text-fg-muted">
+                  MANUAL vs CIVIL AGENT
+                </p>
+
+                <div className="mt-8 space-y-8">
+                  <div>
+                    <div className="mb-3 flex items-end justify-between gap-4">
+                      <p className="font-mono text-[12px] uppercase tracking-[0.12em] text-fg-muted">
+                        MANUAL TAKEOFF
+                      </p>
+                      <p className="font-body text-[28px] font-medium leading-none text-fg">
+                        40+ hrs
+                      </p>
+                    </div>
+                    <div className="h-2 overflow-hidden rounded-full bg-white/6">
+                      <div className="h-full w-full rounded-full bg-white/35" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="mb-3 flex items-end justify-between gap-4">
+                      <p className="font-mono text-[12px] uppercase tracking-[0.12em] text-fg-muted">
+                        CIVIL AGENT
+                      </p>
+                      <p className="font-body text-[28px] font-medium leading-none text-fg">
+                        &lt; 45 min
+                      </p>
+                    </div>
+                    <div className="h-2 overflow-hidden rounded-full bg-white/6">
+                      <div className="h-full rounded-full bg-fg" style={{ width: "2%" }} />
+                    </div>
+                  </div>
+                </div>
+
+                <p className="mt-8 max-w-[36ch] font-body text-[13px] leading-[1.5] text-fg-muted">
+                  Every scheme produced by Civil Agent cites its ACI 318 and ASCE 7
+                  clauses. Auditable, by default.
+                </p>
+              </div>
+            </div>
+          </motion.aside>
+        </div>
       </div>
 
       <div className="relative" ref={scrollRef}>
@@ -270,7 +317,7 @@ export function StoryProcess() {
               </div>
             </div>
 
-            <div className="relative lg:col-start-2 lg:mx-auto lg:w-full lg:max-w-[560px]">
+            <div className="relative lg:col-start-2 lg:mx-auto lg:w-full lg:max-w-[640px]">
               {debugFlags.noGrid ? null : (
                 <div
                   aria-hidden="true"
@@ -280,28 +327,26 @@ export function StoryProcess() {
               )}
 
               <div
-                className="relative mx-auto w-[min(90vw,560px)] max-w-[560px]"
+                className="relative mx-auto w-[min(90vw,640px)] max-w-[640px]"
                 data-workflow-stack="true"
                 style={{ height: `${STACK_CONTAINER_HEIGHT}px` }}
               >
                 {STACK_LAYERS.map((layer) => {
                   const isCap = layer.key === "top-cap";
                   const isActiveTile = !isCap && layer.key === activePhase;
-                  const hasActiveTile = Boolean(activePhase);
-                  const liftOffset = isCap
-                    ? hasActiveTile
-                      ? 24
-                      : 0
-                    : isActiveTile
-                      ? 56
-                      : 0;
-                  const opacity = isCap ? 1 : isActiveTile ? 1 : 0.58;
+                  const liftOffset = isCap ? 0 : isActiveTile ? 140 : 0;
+                  const opacity = isCap ? 1 : isActiveTile ? 1 : 0.55;
                   const tileScale = debugFlags.noTileMotion
                     ? 1
                     : isActiveTile
                       ? 1.04
                       : 1;
                   const tileTranslateY = debugFlags.noTileMotion ? 0 : -liftOffset;
+                  const stackZIndex = isCap ? 50 : isActiveTile ? 40 : 9 + layer.zIndex;
+                  const tileFilter =
+                    !isCap && !isActiveTile
+                      ? "brightness(0.45) saturate(0.4) blur(0.5px)"
+                      : undefined;
 
                   return (
                     <div
@@ -310,7 +355,7 @@ export function StoryProcess() {
                       key={layer.key}
                       style={{
                         top: `${STACK_TOP_INSET + layer.translateY}px`,
-                        zIndex: layer.zIndex
+                        zIndex: stackZIndex
                       }}
                     >
                       <motion.div
@@ -319,8 +364,9 @@ export function StoryProcess() {
                           scale: tileScale,
                           y: tileTranslateY
                         }}
-                        className={isCap ? "relative mx-auto w-[560px] max-w-full" : "relative w-full"}
+                        className={isCap ? "relative mx-auto w-[640px] max-w-full" : "relative w-full"}
                         initial={false}
+                        style={{ filter: tileFilter }}
                         transition={{
                           duration: sectionTransitionDuration,
                           ease: [0.16, 1, 0.3, 1]
@@ -401,7 +447,7 @@ export function StoryProcess() {
                     }}
                   >
                     <p className="font-mono text-[12px] uppercase tracking-[0.12em] text-fg-muted">
-                      {currentStep.eyebrow.toUpperCase()}
+                      {currentStep.eyebrow}
                     </p>
                     <p className="mt-4 font-body text-[18px] font-normal leading-[1.55] text-fg-muted">
                       {currentStep.body}

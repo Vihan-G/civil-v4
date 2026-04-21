@@ -1,3 +1,8 @@
+"use client";
+
+import { useLayoutEffect, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Wordmark } from "@/components/brand/wordmark";
 import { Button } from "@/components/ui/button";
 import { MaterialIcon } from "@/components/ui/material-icon";
@@ -10,8 +15,49 @@ const navItems = [
 ];
 
 export function TopBar() {
+  const [showHeader, setShowHeader] = useState(false);
+
+  useLayoutEffect(() => {
+    const heroTrigger = document.querySelector<HTMLElement>("#top > div");
+
+    if (!heroTrigger) {
+      setShowHeader(true);
+      return;
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const context = gsap.context(() => {
+      const heroStart = heroTrigger.offsetTop;
+      const heroEnd = heroStart + heroTrigger.offsetHeight - window.innerHeight;
+      setShowHeader(window.scrollY > heroEnd);
+
+      const trigger = ScrollTrigger.create({
+        end: "bottom bottom",
+        id: "top-bar-hero-visibility",
+        onEnter: () => setShowHeader(false),
+        onEnterBack: () => setShowHeader(false),
+        onLeave: () => setShowHeader(true),
+        onLeaveBack: () => setShowHeader(false),
+        start: "top top",
+        trigger: heroTrigger
+      });
+
+      if (trigger.isActive) {
+        setShowHeader(false);
+      }
+    });
+
+    return () => context.revert();
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-20 border-b border-border bg-[rgba(10,10,11,0.4)] backdrop-blur-[12px]">
+    <header
+      className={[
+        "fixed left-0 right-0 top-0 z-20 border-b border-border bg-[rgba(10,10,11,0.4)] transition-[transform,opacity] duration-[240ms] ease-[var(--ease-out)] backdrop-blur-[12px]",
+        showHeader ? "translate-y-0 opacity-100" : "translate-y-[-100%] opacity-0"
+      ].join(" ")}
+    >
       <div className="mx-auto flex h-16 max-w-[1320px] items-center justify-between px-4 sm:px-6 lg:px-10">
         <div className="flex min-w-0 items-center gap-8">
           <Wordmark />

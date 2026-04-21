@@ -14,6 +14,11 @@ describe("StoryProcess", () => {
     expect(source).toContain("ref={scrollRef}");
     expect(source).toContain("ref={pinRef}");
     expect(source).toContain("lg:h-screen");
+    expect(source).toContain('lg:grid-cols-[55%_45%]');
+    expect(source).toContain("MANUAL vs CIVIL AGENT");
+    expect(source).toContain("40+ hrs");
+    expect(source).toContain("&lt; 45 min");
+    expect(source).toContain("Auditable, by default.");
   });
 
   test("keeps the resting stack assets and fixed headroom container in source", () => {
@@ -26,7 +31,8 @@ describe("StoryProcess", () => {
     expect(source).toContain("/how-it-works/tile-01-import.png");
     expect(source).toContain("/how-it-works/tile-04-handoff.png");
     expect(source).toContain("const STACK_HEADROOM = 80;");
-    expect(source).toContain("const STACK_RESTING_OFFSET = 14;");
+    expect(source).toContain("const STACK_RESTING_OFFSET = 18;");
+    expect(source).toContain("const STACK_CAP_OFFSET = -180;");
     expect(source).toContain("style={{ height: `${STACK_CONTAINER_HEIGHT}px` }}");
   });
 
@@ -95,11 +101,8 @@ describe("StoryProcess", () => {
 
     expect(source).toContain("const isCap = layer.key === \"top-cap\";");
     expect(source).toContain("const isActiveTile = !isCap && layer.key === activePhase;");
-    expect(source).toContain("const hasActiveTile = Boolean(activePhase);");
-    expect(source).toContain("const liftOffset = isCap");
-    expect(source).toContain("? hasActiveTile");
-    expect(source).toContain(": isActiveTile");
-    expect(source).toContain("const opacity = isCap ? 1 : isActiveTile ? 1 : 0.58;");
+    expect(source).toContain("const liftOffset = isCap ? 0 : isActiveTile ? 140 : 0;");
+    expect(source).toContain("const opacity = isCap ? 1 : isActiveTile ? 1 : 0.55;");
     expect(source).not.toContain("willChangeRef");
     expect(source).not.toContain("setStackWillChange(true);");
     expect(source).not.toContain("setStackWillChange(false);");
@@ -117,6 +120,8 @@ describe("StoryProcess", () => {
     expect(source).toContain("const sectionTransitionDuration =");
     expect(source).toContain("debugFlags.fastTransitions ? 0.2 : 0.52");
     expect(source).toContain("debugFlags.fastTransitions ? 0.2 : 0.24");
+    expect(source).toContain('brightness(0.45) saturate(0.4) blur(0.5px)');
+    expect(source).toContain("const stackZIndex = isCap ? 50 : isActiveTile ? 40 : 9 + layer.zIndex;");
   });
 
   test("renders the right-column workflow copy block from activePhase", () => {
@@ -126,11 +131,11 @@ describe("StoryProcess", () => {
     );
 
     expect(source).toContain("const currentStep =");
-    expect(source).toContain("HOW_IT_WORKS_STEPS");
+    expect(source).toContain("WORKFLOW_PHASE_COPY");
     expect(source).toContain('lg:grid-cols-[22%_48%_30%]');
     expect(source).toContain('mode="wait"');
     expect(source).toContain("initial={false}");
-    expect(source).toContain("currentStep.eyebrow.toUpperCase()");
+    expect(source).toContain("currentStep.eyebrow");
     expect(source).toContain("currentStep.body");
     expect(source).not.toContain('aria-hidden="true" className="hidden lg:block"');
   });
@@ -145,7 +150,8 @@ describe("StoryProcess", () => {
     expect(source).toContain("height: 896");
     expect(source).toContain("width: 1190");
     expect(source).toContain('object-contain');
-    expect(source).toContain('max-w-[560px]');
-    expect(source).toContain('isCap ? "relative mx-auto w-[560px] max-w-full" : "relative w-full"');
+    expect(source).toContain('max-w-[640px]');
+    expect(source).toContain('isCap ? "relative mx-auto w-[640px] max-w-full" : "relative w-full"');
+    expect(source).toContain('lg:ml-12');
   });
 });
