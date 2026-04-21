@@ -120,7 +120,7 @@ describe("StoryProcess", () => {
     expect(source).toContain("const sectionTransitionDuration =");
     expect(source).toContain("debugFlags.fastTransitions ? 0.2 : 0.52");
     expect(source).toContain("debugFlags.fastTransitions ? 0.2 : 0.24");
-    expect(source).toContain('brightness(0.45) saturate(0.4) blur(0.5px)');
+    expect(source).toContain('brightness(0.4) saturate(0.3) blur(3px)');
     expect(source).toContain("const stackZIndex = isCap ? 50 : isActiveTile ? 40 : 9 + layer.zIndex;");
   });
 
@@ -153,5 +153,6 @@ describe("StoryProcess", () => {
     expect(source).toContain('max-w-[640px]');
     expect(source).toContain('isCap ? "relative mx-auto w-[640px] max-w-full" : "relative w-full"');
     expect(source).toContain('lg:ml-12');
+    expect(source).toContain('style={{ transform: "translateY(100px)" }}');
   });
 });

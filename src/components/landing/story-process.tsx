@@ -317,7 +317,10 @@ export function StoryProcess() {
               </div>
             </div>
 
-            <div className="relative lg:col-start-2 lg:mx-auto lg:w-full lg:max-w-[640px]">
+            <div
+              className="relative lg:col-start-2 lg:mx-auto lg:w-full lg:max-w-[640px]"
+              style={{ transform: "translateY(100px)" }}
+            >
               {debugFlags.noGrid ? null : (
                 <div
                   aria-hidden="true"
@@ -345,7 +348,7 @@ export function StoryProcess() {
                   const stackZIndex = isCap ? 50 : isActiveTile ? 40 : 9 + layer.zIndex;
                   const tileFilter =
                     !isCap && !isActiveTile
-                      ? "brightness(0.45) saturate(0.4) blur(0.5px)"
+                      ? "brightness(0.4) saturate(0.3) blur(3px)"
                       : undefined;
 
                   return (
