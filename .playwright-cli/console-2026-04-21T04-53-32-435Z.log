@@ -1,0 +1,17 @@
+[     315ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2:0
+[     316ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/media/ab57efd000576a30-s.p.0.xyi-bdzzdcz.woff2:0
+[     316ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/chunks/14h3dw2binvpk.css:0
+[     316ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/media/e1750518007a189a-s.p.0q9o2mhri4tk5.woff2:0
+[     387ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/chunks/0ljspdd3cv1ft.js:0
+[     387ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/chunks/0~rnrpz-e-o0m.js:0
+[     387ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/chunks/110q6k5sdl4es.js:0
+[     387ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/chunks/turbopack-0u6z5t~txcv_k.js:0
+[     388ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/chunks/0dm8npyrisktk.js:0
+[     388ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/chunks/0dbhjjzl8qfwv.js:0
+[     388ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/chunks/0.htzo325brx1.js:0
+[     388ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/chunks/16p4wti3i69e_.js:0
+[     388ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:3000/_next/static/chunks/0_8xm-tirfdhy.js:0
+[     412ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://127.0.0.1:3000/favicon.ico:0
+[    3413ms] [WARNING] The resource http://127.0.0.1:3000/_next/static/media/ab57efd000576a30-s.p.0.xyi-bdzzdcz.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:3000/:0
+[    3414ms] [WARNING] The resource http://127.0.0.1:3000/_next/static/media/e1750518007a189a-s.p.0q9o2mhri4tk5.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:3000/:0
+[    3414ms] [WARNING] The resource http://127.0.0.1:3000/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://127.0.0.1:3000/:0

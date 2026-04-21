@@ -115,7 +115,7 @@ export function HowItWorks({ material }: MaterialAwareProps) {
 
 export function LivePreviewSection() {
   return (
-    <section className="bg-surface-low px-4 py-20 sm:px-6 sm:py-24 lg:px-10" id="preview">
+    <section className="bg-surface-low px-4 py-20 sm:px-6 sm:py-24 lg:px-10 lg:pb-20 lg:pt-10" id="preview">
       <div className="mx-auto max-w-[1320px]">
         <SectionEyebrow index="03 / 05">Live product preview</SectionEyebrow>
         <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.45fr] lg:items-end">

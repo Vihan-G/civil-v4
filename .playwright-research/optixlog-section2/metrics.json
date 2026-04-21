@@ -1,0 +1,490 @@
+{
+  "metrics": {
+    "sectionTop": 3600,
+    "runway": 1595.21875,
+    "viewportHeight": 900,
+    "wrapperHeight": 2495.21875,
+    "targetHeight": 900
+  },
+  "results": [
+    {
+      "point": 0,
+      "file": "/Users/vihangoenka/Projects/civil/v4/.playwright-research/optixlog-section2/progress-0.png",
+      "details": {
+        "scrollY": 3600,
+        "sectionRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900,
+          "top": 0,
+          "right": 1440,
+          "bottom": 900,
+          "left": 0
+        },
+        "labels": [
+          {
+            "text": "Better Context In.Better Engineering Answers Out.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Better Context In.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Better Engineering Answers Out.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Error Rate",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Automation Setup",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Without OptixLog",
+            "color": "rgba(255, 240, 224, 0.72)",
+            "opacity": "1",
+            "fontWeight": "500"
+          },
+          {
+            "text": "86 %",
+            "color": "rgba(255, 248, 241, 0.76)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "With OptixLog",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "17 %",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Minutes to Answer",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Data Set Size",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Without OptixLog",
+            "color": "rgba(255, 240, 224, 0.74)",
+            "opacity": "1",
+            "fontWeight": "500"
+          }
+        ]
+      }
+    },
+    {
+      "point": 0.25,
+      "file": "/Users/vihangoenka/Projects/civil/v4/.playwright-research/optixlog-section2/progress-25.png",
+      "details": {
+        "scrollY": 3999,
+        "sectionRect": {
+          "x": 0,
+          "y": -399,
+          "width": 1440,
+          "height": 900,
+          "top": -399,
+          "right": 1440,
+          "bottom": 501,
+          "left": 0
+        },
+        "labels": [
+          {
+            "text": "Better Context In.Better Engineering Answers Out.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Better Context In.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Better Engineering Answers Out.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Error Rate",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Automation Setup",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Without OptixLog",
+            "color": "rgba(255, 240, 224, 0.72)",
+            "opacity": "1",
+            "fontWeight": "500"
+          },
+          {
+            "text": "86 %",
+            "color": "rgba(255, 248, 241, 0.76)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "With OptixLog",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "17 %",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Minutes to Answer",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Data Set Size",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Without OptixLog",
+            "color": "rgba(255, 240, 224, 0.74)",
+            "opacity": "1",
+            "fontWeight": "500"
+          },
+          {
+            "text": "With OptixLog",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          }
+        ]
+      }
+    },
+    {
+      "point": 0.5,
+      "file": "/Users/vihangoenka/Projects/civil/v4/.playwright-research/optixlog-section2/progress-50.png",
+      "details": {
+        "scrollY": 4398,
+        "sectionRect": {
+          "x": 0,
+          "y": -798,
+          "width": 1440,
+          "height": 900,
+          "top": -798,
+          "right": 1440,
+          "bottom": 102,
+          "left": 0
+        },
+        "labels": [
+          {
+            "text": "Better Context In.Better Engineering Answers Out.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Better Context In.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Better Engineering Answers Out.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Error Rate",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Automation Setup",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Without OptixLog",
+            "color": "rgba(255, 240, 224, 0.72)",
+            "opacity": "1",
+            "fontWeight": "500"
+          },
+          {
+            "text": "86 %",
+            "color": "rgba(255, 248, 241, 0.76)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "With OptixLog",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "17 %",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Minutes to Answer",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Data Set Size",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Without OptixLog",
+            "color": "rgba(255, 240, 224, 0.74)",
+            "opacity": "1",
+            "fontWeight": "500"
+          },
+          {
+            "text": "With OptixLog",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          }
+        ]
+      }
+    },
+    {
+      "point": 0.75,
+      "file": "/Users/vihangoenka/Projects/civil/v4/.playwright-research/optixlog-section2/progress-75.png",
+      "details": {
+        "scrollY": 4796,
+        "sectionRect": {
+          "x": 0,
+          "y": -1196,
+          "width": 1440,
+          "height": 900,
+          "top": -1196,
+          "right": 1440,
+          "bottom": -296,
+          "left": 0
+        },
+        "labels": [
+          {
+            "text": "Better Context In.Better Engineering Answers Out.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Better Context In.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Better Engineering Answers Out.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Error Rate",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Automation Setup",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Without OptixLog",
+            "color": "rgba(255, 240, 224, 0.72)",
+            "opacity": "1",
+            "fontWeight": "500"
+          },
+          {
+            "text": "86 %",
+            "color": "rgba(255, 248, 241, 0.76)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "With OptixLog",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "17 %",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Minutes to Answer",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Data Set Size",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Without OptixLog",
+            "color": "rgba(255, 240, 224, 0.74)",
+            "opacity": "1",
+            "fontWeight": "500"
+          },
+          {
+            "text": "With OptixLog",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          }
+        ]
+      }
+    },
+    {
+      "point": 1,
+      "file": "/Users/vihangoenka/Projects/civil/v4/.playwright-research/optixlog-section2/progress-100.png",
+      "details": {
+        "scrollY": 5195,
+        "sectionRect": {
+          "x": 0,
+          "y": -1595,
+          "width": 1440,
+          "height": 900,
+          "top": -1595,
+          "right": 1440,
+          "bottom": -695,
+          "left": 0
+        },
+        "labels": [
+          {
+            "text": "Better Context In.Better Engineering Answers Out.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Better Context In.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Better Engineering Answers Out.",
+            "color": "rgb(255, 248, 241)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Error Rate",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Automation Setup",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Without OptixLog",
+            "color": "rgba(255, 240, 224, 0.72)",
+            "opacity": "1",
+            "fontWeight": "500"
+          },
+          {
+            "text": "86 %",
+            "color": "rgba(255, 248, 241, 0.76)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "With OptixLog",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "17 %",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Minutes to Answer",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Data Set Size",
+            "color": "rgba(255, 224, 192, 0.56)",
+            "opacity": "1",
+            "fontWeight": "600"
+          },
+          {
+            "text": "Without OptixLog",
+            "color": "rgba(255, 240, 224, 0.74)",
+            "opacity": "1",
+            "fontWeight": "500"
+          },
+          {
+            "text": "With OptixLog",
+            "color": "rgb(255, 213, 167)",
+            "opacity": "1",
+            "fontWeight": "600"
+          }
+        ]
+      }
+    }
+  ]
+}

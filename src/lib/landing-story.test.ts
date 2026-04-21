@@ -3,7 +3,8 @@ import {
   PROCESS_PROGRESS_OPTIONS,
   getHeroBeat,
   getHeroKpis,
-  getProcessActiveIndex
+  getProcessActiveIndex,
+  getWorkflowActivePhase
 } from "./landing-story";
 
 describe("getHeroBeat", () => {
@@ -58,5 +59,26 @@ describe("PROCESS_PROGRESS_OPTIONS", () => {
       captureMode: "scrub"
     });
     expect(PROCESS_PROGRESS_OPTIONS.scrubDistance).toBeGreaterThan(2400);
+  });
+});
+
+describe("getWorkflowActivePhase", () => {
+  test("starts in import and advances at the confirmed upward boundaries", () => {
+    expect(getWorkflowActivePhase(0, "import", 0.03)).toBe("import");
+    expect(getWorkflowActivePhase(0.25, "import", 0.03)).toBe("declare");
+    expect(getWorkflowActivePhase(0.53, "declare", 0.03)).toBe("compare");
+    expect(getWorkflowActivePhase(0.78, "compare", 0.03)).toBe("handoff");
+  });
+
+  test("holds the current phase inside the hysteresis bands on reverse scroll", () => {
+    expect(getWorkflowActivePhase(0.24, "declare", 0.03)).toBe("declare");
+    expect(getWorkflowActivePhase(0.48, "compare", 0.03)).toBe("compare");
+    expect(getWorkflowActivePhase(0.73, "handoff", 0.03)).toBe("handoff");
+  });
+
+  test("reverts only after dropping below the confirmed downward thresholds", () => {
+    expect(getWorkflowActivePhase(0.21, "declare", 0.03)).toBe("import");
+    expect(getWorkflowActivePhase(0.46, "compare", 0.03)).toBe("declare");
+    expect(getWorkflowActivePhase(0.71, "handoff", 0.03)).toBe("compare");
   });
 });

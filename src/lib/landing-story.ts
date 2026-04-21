@@ -1,4 +1,5 @@
 export type HeroBeat = "plan" | "frame" | "optimize" | "handoff";
+export type WorkflowPhase = "import" | "declare" | "compare" | "handoff";
 
 export type HeroKpi = {
   label: string;
@@ -9,6 +10,12 @@ export const PROCESS_PROGRESS_OPTIONS = {
   captureMode: "scrub" as const,
   scrubDistance: 3000
 };
+
+const WORKFLOW_PHASE_BASES = {
+  compare: 0.5,
+  declare: 0.25,
+  handoff: 0.75
+} as const;
 
 const BASELINE_KPIS: HeroKpi[] = [
   { label: "Iteration speed", value: "Slow review loop" },
@@ -63,4 +70,46 @@ export function getProcessActiveIndex(progress: number, stepCount: number) {
 
   const clamped = clampUnit(progress);
   return Math.min(stepCount - 1, Math.floor(clamped * stepCount));
+}
+
+export function getWorkflowActivePhase(
+  progress: number,
+  currentPhase: WorkflowPhase,
+  hysteresis = 0.03
+): WorkflowPhase {
+  const clamped = clampUnit(progress);
+  const offset = clampUnit(hysteresis);
+  const declareDown = WORKFLOW_PHASE_BASES.declare - offset;
+  const declareUp = WORKFLOW_PHASE_BASES.declare;
+  const compareDown = WORKFLOW_PHASE_BASES.compare - offset;
+  const compareUp = WORKFLOW_PHASE_BASES.compare + offset;
+  const handoffDown = WORKFLOW_PHASE_BASES.handoff - offset;
+  const handoffUp = WORKFLOW_PHASE_BASES.handoff + offset;
+
+  switch (currentPhase) {
+    case "import":
+      return clamped >= declareUp ? "declare" : "import";
+
+    case "declare":
+      if (clamped < declareDown) {
+        return "import";
+      }
+
+      return clamped >= compareUp ? "compare" : "declare";
+
+    case "compare":
+      if (clamped < compareDown) {
+        return "declare";
+      }
+
+      return clamped >= handoffUp ? "handoff" : "compare";
+
+    case "handoff":
+      return clamped < handoffDown
+        ? "compare"
+        : "handoff";
+
+    default:
+      return currentPhase;
+  }
 }

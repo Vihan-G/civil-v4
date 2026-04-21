@@ -1,0 +1,468 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Civil AgentPre-launch" [ref=e6] [cursor=pointer]:
+          - /url: "#top"
+          - img [ref=e7]
+          - text: Civil AgentPre-launch
+        - navigation "Primary navigation" [ref=e10]:
+          - link "Product" [ref=e11] [cursor=pointer]:
+            - /url: "#product"
+          - link "How it works" [ref=e12] [cursor=pointer]:
+            - /url: "#how-it-works"
+          - link "Preview" [ref=e13] [cursor=pointer]:
+            - /url: "#preview"
+          - link "FAQ" [ref=e14] [cursor=pointer]:
+            - /url: "#faq"
+      - generic [ref=e15]:
+        - link "Sign in" [ref=e16] [cursor=pointer]:
+          - /url: "#cta"
+        - link "Request early accessAccess" [ref=e17] [cursor=pointer]:
+          - /url: "#cta"
+          - generic [ref=e18]: Request early accessAccess
+          - img [ref=e19]
+        - button "Open navigation" [ref=e21]:
+          - img [ref=e22]
+  - main [ref=e24]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - img [ref=e33]:
+          - generic [ref=e42]: FOYER
+          - generic [ref=e43]: LIVING
+          - generic [ref=e44]: KITCHEN
+          - generic [ref=e45]: BEDROOM 1
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - text: 01 / 05
+            - text: Structural intelligence, before redesign
+          - button "Skip intro" [ref=e48]
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - generic [ref=e51]: phase 01 / drawing
+            - heading "Preliminary structural design, in minutes." [level=1] [ref=e52]
+            - paragraph [ref=e53]: Civil Agent produces auditable structural schemes from architectural massing. Constraint driven. Physics based. Ready for a consultant handoff before the next design review.
+            - generic [ref=e54]:
+              - link "Request early access" [ref=e55] [cursor=pointer]:
+                - /url: "#cta"
+              - link "See how it works" [ref=e56] [cursor=pointer]:
+                - /url: "#how-it-works"
+          - generic [ref=e57]:
+            - text: Input
+            - heading "Import the architectural massing." [level=2] [ref=e58]
+            - paragraph [ref=e59]: Bring in floor plates, cores, and voids from Rhino, Revit, or IFC. Civil Agent parses the geometry into a Building Graph of bays, spans, and tributary areas.
+            - generic [ref=e60]: Building Graph.dwg / .ifc / .3dm
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - text: Preliminary scheme
+          - paragraph [ref=e63]: < 10 min
+        - generic [ref=e64]:
+          - text: Code checks
+          - paragraph [ref=e65]: ACI 318
+        - generic [ref=e66]:
+          - text: Multi material
+          - paragraph [ref=e67]: RC / Steel
+    - generic [ref=e70]:
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - text: 02 / 05
+            - text: How it works
+          - heading "From massing to member schedule, without the two week loop." [level=2] [ref=e74]
+          - paragraph [ref=e75]: Civil Agent does not generate a building. It reasons about the one already on the table, producing structural schemes that teams can trust, interrogate, and iterate on.
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - text: "01"
+              - text: Input
+            - generic [ref=e79]:
+              - generic [ref=e80]: Building Graph
+              - text: .dwg / .ifc / .3dm
+          - generic [ref=e82]:
+            - text: "02"
+            - text: Constraints
+          - generic [ref=e84]:
+            - text: "03"
+            - text: Optimize
+          - generic [ref=e86]:
+            - text: "04"
+            - text: Handoff
+      - generic [ref=e87]:
+        - generic [ref=e90]:
+          - article [ref=e91]:
+            - generic [ref=e92]:
+              - generic [ref=e93]:
+                - generic [ref=e94]: 01Input
+                - heading "Import the architectural massing." [level=3] [ref=e95]
+              - generic [ref=e96]: Building Graph
+            - generic [ref=e97]:
+              - generic [ref=e99]:
+                - img [ref=e101]
+                - generic [ref=e104]:
+                  - generic [ref=e105]: plates
+                  - generic [ref=e106]: core
+                  - generic [ref=e107]: voids
+              - generic [ref=e108]:
+                - generic [ref=e109]:
+                  - text: Business angle
+                  - paragraph [ref=e110]: Bring in floor plates, cores, and voids from Rhino, Revit, or IFC. Civil Agent parses the geometry into a Building Graph of bays, spans, and tributary areas.
+                - generic [ref=e111]:
+                  - text: Output
+                  - paragraph [ref=e112]: .dwg / .ifc / .3dm
+          - article [ref=e113]:
+            - generic [ref=e114]:
+              - generic [ref=e115]: 02Constraints
+              - generic [ref=e116]: ACI 318 / ASCE 7
+            - generic [ref=e117]:
+              - text: jurisdiction / SDC
+              - text: "02"
+          - article [ref=e119]
+          - article [ref=e120]
+        - generic [ref=e121]:
+          - article [ref=e122]:
+            - generic [ref=e123]:
+              - text: "01"
+              - generic [ref=e124]: Building Graph
+            - heading "Import the architectural massing." [level=3] [ref=e125]
+            - paragraph [ref=e126]: Bring in floor plates, cores, and voids from Rhino, Revit, or IFC. Civil Agent parses the geometry into a Building Graph of bays, spans, and tributary areas.
+            - generic [ref=e129]:
+              - img [ref=e131]
+              - generic [ref=e134]:
+                - generic [ref=e135]: plates
+                - generic [ref=e136]: core
+                - generic [ref=e137]: voids
+          - article [ref=e138]:
+            - generic [ref=e139]:
+              - text: "02"
+              - generic [ref=e140]: ACI 318 / ASCE 7
+            - heading "Declare the constraints." [level=3] [ref=e141]
+            - paragraph [ref=e142]: Material system, target floor-to-floor, seismic zone, wind zone, and code jurisdiction become solver constraints before member sizing starts.
+            - generic [ref=e144]:
+              - generic [ref=e145]:
+                - generic [ref=e146]:
+                  - text: Material
+                  - paragraph [ref=e147]: Steel frame
+                - generic [ref=e148]:
+                  - text: Code
+                  - paragraph [ref=e149]: ACI 318 / ASCE 7
+              - generic [ref=e150]:
+                - generic [ref=e151]: floor-to-floor
+                - generic [ref=e152]: seismic zone
+                - generic [ref=e153]: jurisdiction
+          - article [ref=e154]:
+            - generic [ref=e155]:
+              - text: "03"
+              - generic [ref=e156]: Design Graph
+            - heading "Compare schemes side by side." [level=3] [ref=e157]
+            - paragraph [ref=e158]: Physics based iteration searches grid spacing, lateral system, and structural depth. Every scheme carries confidence against code and cost.
+            - img [ref=e161]:
+              - generic [ref=e170]: before
+              - generic [ref=e171]: after
+          - article [ref=e172]:
+            - generic [ref=e173]:
+              - text: "04"
+              - generic [ref=e174]: Design Summary
+            - heading "Hand off, not hand over." [level=3] [ref=e175]
+            - paragraph [ref=e176]: Export a structured report with member schedules, load tables, design notes, and a live link back to the graph.
+            - generic [ref=e178]:
+              - generic [ref=e179]:
+                - generic [ref=e180]:
+                  - text: Report
+                  - paragraph [ref=e181]: design summary
+                - generic [ref=e182]:
+                  - text: Exchange
+                  - paragraph [ref=e183]: .pdf / .ifc / live link
+              - generic [ref=e184]:
+                - generic [ref=e185]: member schedules
+                - generic [ref=e186]: load tables
+                - generic [ref=e187]: design notes
+    - generic [ref=e189]:
+      - generic [ref=e190]:
+        - text: 03 / 05
+        - text: Live product preview
+      - generic [ref=e191]:
+        - heading "The Building Graph, rendered at engineering fidelity." [level=2] [ref=e192]
+        - paragraph [ref=e193]: Elements are queryable. Confidence intervals, load paths, and code citations sit one interaction away because an engineer has to trust the output, not just inspect it.
+      - generic [ref=e194]:
+        - generic [ref=e195]:
+          - generic [ref=e196]:
+            - generic [ref=e197]: civilagent.com/project/cornerstone-tower/graph
+            - text: read-only preview
+          - generic [ref=e199]:
+            - generic [ref=e200]:
+              - generic [ref=e201]:
+                - link "Civil Agent" [ref=e202] [cursor=pointer]:
+                  - /url: "#top"
+                  - img [ref=e203]
+                  - text: Civil Agent
+                - navigation "Preview navigation" [ref=e206]:
+                  - link "Projects" [ref=e207] [cursor=pointer]:
+                    - /url: "#preview"
+                  - link "Building Graph" [ref=e208] [cursor=pointer]:
+                    - /url: "#preview"
+                  - link "3D View" [ref=e209] [cursor=pointer]:
+                    - /url: "#preview"
+                  - link "Summary" [ref=e210] [cursor=pointer]:
+                    - /url: "#preview"
+              - generic [ref=e211]:
+                - generic [ref=e212]:
+                  - img [ref=e213]
+                  - text: Search projects
+                - button "layers" [ref=e215]:
+                  - img [ref=e216]
+                - button "settings" [ref=e218]:
+                  - img [ref=e219]
+                - button "account circle" [ref=e222]:
+                  - img [ref=e223]
+            - generic [ref=e227]:
+              - complementary [ref=e228]:
+                - generic [ref=e229]:
+                  - paragraph [ref=e230]: Navigation
+                  - text: Analytical Views
+                - navigation "Analytical views" [ref=e231]:
+                  - link "Dashboard" [ref=e232] [cursor=pointer]:
+                    - /url: "#preview"
+                    - img [ref=e233]
+                    - text: Dashboard
+                  - link "Input Form" [ref=e235] [cursor=pointer]:
+                    - /url: "#preview"
+                    - img [ref=e236]
+                    - text: Input Form
+                  - link "File Upload" [ref=e238] [cursor=pointer]:
+                    - /url: "#preview"
+                    - img [ref=e239]
+                    - text: File Upload
+                  - link "Building Graph" [ref=e241] [cursor=pointer]:
+                    - /url: "#preview"
+                    - img [ref=e242]
+                    - text: Building Graph
+                  - link "Structural Zones" [ref=e244] [cursor=pointer]:
+                    - /url: "#preview"
+                    - img [ref=e245]
+                    - text: Structural Zones
+                  - link "Support Map" [ref=e247] [cursor=pointer]:
+                    - /url: "#preview"
+                    - img [ref=e248]
+                    - text: Support Map
+                  - link "Design Summary" [ref=e250] [cursor=pointer]:
+                    - /url: "#preview"
+                    - img [ref=e251]
+                    - text: Design Summary
+              - main [ref=e253]:
+                - generic [ref=e254]:
+                  - button "Walls" [ref=e255]:
+                    - img [ref=e256]
+                    - text: Walls
+                  - button "Grid" [ref=e259]:
+                    - img [ref=e260]
+                    - text: Grid
+                  - button "Rooms" [ref=e262]:
+                    - img [ref=e263]
+                    - text: Rooms
+                  - button "Columns" [ref=e266]:
+                    - img [ref=e267]
+                    - text: Columns
+                  - button "Cores" [ref=e269]:
+                    - img [ref=e270]
+                    - text: Cores
+                - generic [ref=e274]:
+                  - img "Plan view of the active building graph" [ref=e275]:
+                    - generic [ref=e279]: Primary Core
+                    - generic [ref=e289]: Main Entry Gap
+                  - generic [ref=e290]:
+                    - generic [ref=e291]: Verified Column
+                    - generic [ref=e292]: Constraint Conflict
+                    - generic [ref=e293]: Transfer Risk
+                - generic [ref=e294]:
+                  - button "add" [ref=e295]:
+                    - img [ref=e296]
+                  - button "remove" [ref=e298]:
+                    - img [ref=e299]
+                  - button "center focus_weak" [ref=e300]:
+                    - img [ref=e301]
+              - complementary [ref=e303]:
+                - generic [ref=e304]:
+                  - text: Project Specs
+                  - paragraph [ref=e305]: Layer properties and metrics
+                - generic [ref=e306]:
+                  - generic [ref=e307]: Completeness84.2%
+                  - paragraph [ref=e308]: Validation references ASCE 7-22 seismic lateral force requirements.
+                - generic [ref=e309]:
+                  - text: Structural Metadata
+                  - generic [ref=e310]: Grid SystemOrthogonal 10x10m
+                  - generic [ref=e311]: Total Area3,850 m2
+                  - generic [ref=e312]: Active Load PathVerified L1-L4
+                  - generic [ref=e313]: MaterialConcrete C30/37
+                - generic [ref=e314]:
+                  - text: Assumptions
+                  - generic [ref=e315]:
+                    - img [ref=e316]
+                    - paragraph [ref=e319]: Internal partitions are non-load bearing unless tagged.
+                  - generic [ref=e320]:
+                    - img [ref=e321]
+                    - paragraph [ref=e324]: Foundation capacity assumes Class C soil profile.
+                - generic [ref=e325]:
+                  - generic [ref=e326]:
+                    - img [ref=e327]
+                    - text: Column spacing
+                  - generic [ref=e330]: Span at Grid C-4 exceeds 12 m limit. Transfer beam required or additional support candidate.
+        - generic [ref=e331]:
+          - text: fig. 003 / Cornerstone Tower / L1-L7 / RC flat-slab / 2-bay core
+          - link "Request full workspace access" [ref=e332] [cursor=pointer]:
+            - /url: "#cta"
+      - generic [ref=e333]:
+        - generic [ref=e334]:
+          - generic [ref=e335]:
+            - text: Avg. Confidence
+            - generic [ref=e336]: 94.2%
+          - generic [ref=e337]:
+            - text: Processing Load
+            - generic [ref=e338]: 12Nodes
+          - generic [ref=e339]:
+            - text: Storage Util.
+            - generic [ref=e340]: 68GB
+          - generic [ref=e341]:
+            - text: System Status
+            - generic [ref=e342]: Optimal
+        - generic [ref=e343]:
+          - generic [ref=e344]:
+            - generic [ref=e345]:
+              - paragraph [ref=e346]: Nexus Spine Central
+              - text: IFC Binary
+            - generic [ref=e348]: 98%
+            - generic [ref=e349]: Complete
+          - generic [ref=e350]:
+            - generic [ref=e351]:
+              - paragraph [ref=e352]: Cantilever Garden
+              - text: DXF Plot
+            - generic [ref=e354]: 45%
+            - generic [ref=e355]: Processing
+          - generic [ref=e356]:
+            - generic [ref=e357]:
+              - paragraph [ref=e358]: Void-Form Core V2
+              - text: Image Scan
+            - generic [ref=e360]: 82%
+            - generic [ref=e361]: Needs Review
+    - generic [ref=e363]:
+      - generic [ref=e364]:
+        - text: 04 / 05
+        - text: Frequently asked
+      - heading "Questions structural engineers tend to ask first." [level=2] [ref=e365]
+      - generic [ref=e366]:
+        - generic [ref=e367]:
+          - button "01Does Civil Agent replace my structural engineer?" [expanded] [ref=e368]:
+            - generic [ref=e369]: 01Does Civil Agent replace my structural engineer?
+            - img [ref=e370]
+          - paragraph [ref=e374]: No. Civil Agent produces preliminary, code-compliant schemes for the early design phase. The output is a starting point for the structural consultant, with traceable load paths and auditable assumptions.
+        - generic [ref=e375]:
+          - button "02What structural systems are supported?" [ref=e376]:
+            - generic [ref=e377]: 02What structural systems are supported?
+            - img [ref=e378]
+          - paragraph [ref=e382]: "At launch: reinforced concrete flat plate, flat slab with drops, one-way joist, two-way beam systems, and steel composite beam and column schemes with braced or moment frames."
+        - generic [ref=e383]:
+          - button "03Which codes are implemented?" [ref=e384]:
+            - generic [ref=e385]: 03Which codes are implemented?
+            - img [ref=e386]
+          - paragraph [ref=e390]: ACI 318-19 and AISC 360-22 are used for member design. ASCE 7-22 supplies load references. Additional jurisdictions can be evaluated during onboarding.
+        - generic [ref=e391]:
+          - button "04How is this different from a generative AI tool?" [ref=e392]:
+            - generic [ref=e393]: 04How is this different from a generative AI tool?
+            - img [ref=e394]
+          - paragraph [ref=e398]: Civil Agent is constraint driven and physics based. The schemes come from a deterministic solver that respects equilibrium, serviceability, and code limits.
+        - generic [ref=e399]:
+          - button "05Does the workflow require a new modeling tool?" [ref=e400]:
+            - generic [ref=e401]: 05Does the workflow require a new modeling tool?
+            - img [ref=e402]
+          - paragraph [ref=e406]: No. Civil Agent ingests Rhino, Revit, IFC, and drawing exports, then writes back a structured report and exchangeable model data for consultant workflows.
+    - generic [ref=e408]:
+      - generic [ref=e409]:
+        - text: 05 / 05
+        - text: Request early access
+      - generic [ref=e410]:
+        - heading "Join the first AEC cohort running preliminary design at conversation speed." [level=2] [ref=e411]
+        - generic [ref=e412]:
+          - paragraph [ref=e413]: Onboarding is limited to active project teams. Structural engineers and mixed AEC firms are prioritized for calibration data.
+          - generic [ref=e414]:
+            - generic [ref=e415]:
+              - img [ref=e416]
+              - text: Firm email
+              - textbox "Firm email" [ref=e418]:
+                - /placeholder: you@firm.com
+              - button "Request access" [ref=e419]:
+                - text: Request access
+                - img [ref=e420]
+            - generic [ref=e422]: structural / AEC / architectno credit card
+  - contentinfo [ref=e423]:
+    - generic [ref=e424]:
+      - generic [ref=e425]:
+        - generic [ref=e426]:
+          - link "Civil AgentPre-launch" [ref=e427] [cursor=pointer]:
+            - /url: "#top"
+            - img [ref=e428]
+            - text: Civil AgentPre-launch
+          - paragraph [ref=e431]: Structural intelligence for preliminary design, built with practicing structural engineers.
+        - generic [ref=e432]:
+          - text: Product
+          - list [ref=e433]:
+            - listitem [ref=e434]:
+              - link "Overview" [ref=e435] [cursor=pointer]:
+                - /url: "#top"
+            - listitem [ref=e436]:
+              - link "Building Graph" [ref=e437] [cursor=pointer]:
+                - /url: "#top"
+            - listitem [ref=e438]:
+              - link "Design Summary" [ref=e439] [cursor=pointer]:
+                - /url: "#top"
+            - listitem [ref=e440]:
+              - link "Changelog" [ref=e441] [cursor=pointer]:
+                - /url: "#top"
+        - generic [ref=e442]:
+          - text: Engineering
+          - list [ref=e443]:
+            - listitem [ref=e444]:
+              - link "ACI 318-19" [ref=e445] [cursor=pointer]:
+                - /url: "#top"
+            - listitem [ref=e446]:
+              - link "AISC 360-22" [ref=e447] [cursor=pointer]:
+                - /url: "#top"
+            - listitem [ref=e448]:
+              - link "ASCE 7-22" [ref=e449] [cursor=pointer]:
+                - /url: "#top"
+            - listitem [ref=e450]:
+              - link "Jurisdictions" [ref=e451] [cursor=pointer]:
+                - /url: "#top"
+        - generic [ref=e452]:
+          - text: Company
+          - list [ref=e453]:
+            - listitem [ref=e454]:
+              - link "About" [ref=e455] [cursor=pointer]:
+                - /url: "#top"
+            - listitem [ref=e456]:
+              - link "Careers" [ref=e457] [cursor=pointer]:
+                - /url: "#top"
+            - listitem [ref=e458]:
+              - link "Contact" [ref=e459] [cursor=pointer]:
+                - /url: "#top"
+            - listitem [ref=e460]:
+              - link "Press" [ref=e461] [cursor=pointer]:
+                - /url: "#top"
+        - generic [ref=e462]:
+          - text: Legal
+          - list [ref=e463]:
+            - listitem [ref=e464]:
+              - link "Terms" [ref=e465] [cursor=pointer]:
+                - /url: "#top"
+            - listitem [ref=e466]:
+              - link "Privacy" [ref=e467] [cursor=pointer]:
+                - /url: "#top"
+            - listitem [ref=e468]:
+              - link "Security" [ref=e469] [cursor=pointer]:
+                - /url: "#top"
+            - listitem [ref=e470]:
+              - link "Status" [ref=e471] [cursor=pointer]:
+                - /url: "#top"
+      - generic [ref=e472]:
+        - text: 2026 Civil Agent / San Francisco + Zurich
+        - generic [ref=e473]:
+          - text: v0.8.2
+          - generic [ref=e474]: all systems nominal

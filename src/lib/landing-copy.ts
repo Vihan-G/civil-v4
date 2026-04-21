@@ -10,7 +10,7 @@ export const HERO_METRICS = [
 ] as const;
 
 export const HOW_IT_WORKS_TITLE =
-  "From massing to member schedule, without the two week loop.";
+  "From massing to member schedule, in one loop.";
 
 export const HOW_IT_WORKS_BODY =
   "Civil Agent does not generate a building. It reasons about the one already on the table, producing structural schemes that teams can trust, interrogate, and iterate on.";

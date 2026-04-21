@@ -11,7 +11,7 @@ const navItems = [
 
 export function TopBar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/90 backdrop-blur-xl">
+    <header className="fixed top-0 left-0 right-0 z-20 border-b border-border bg-[rgba(10,10,11,0.4)] backdrop-blur-[12px]">
       <div className="mx-auto flex h-16 max-w-[1320px] items-center justify-between px-4 sm:px-6 lg:px-10">
         <div className="flex min-w-0 items-center gap-8">
           <Wordmark />

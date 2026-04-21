@@ -1,0 +1,186 @@
+{
+  "metrics": {
+    "sectionTop": 900,
+    "runway": 1800,
+    "viewportHeight": 900,
+    "stageHeight": 2700,
+    "stickyHeight": 900
+  },
+  "results": [
+    {
+      "point": 0,
+      "file": "/Users/vihangoenka/Projects/civil/v4/.playwright-research/optixlog-section2/working-progress-0.png",
+      "details": {
+        "scrollY": 900,
+        "labelNodes": [
+          {
+            "text": "Observation",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "700"
+          },
+          {
+            "text": "Distillation",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Context",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Control",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          }
+        ],
+        "activeHeading": "Observation",
+        "activeBody": "Capture the raw engineering data already generated across simulation, layout, fabrication, metrology, and characterization."
+      }
+    },
+    {
+      "point": 0.25,
+      "file": "/Users/vihangoenka/Projects/civil/v4/.playwright-research/optixlog-section2/working-progress-25.png",
+      "details": {
+        "scrollY": 1350,
+        "labelNodes": [
+          {
+            "text": "Observation",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Distillation",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "700"
+          },
+          {
+            "text": "Context",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Control",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          }
+        ],
+        "activeHeading": "Distillation",
+        "activeBody": "Convert disconnected files into structured records by metadata, parameters, run history, and links between workflow stages."
+      }
+    },
+    {
+      "point": 0.5,
+      "file": "/Users/vihangoenka/Projects/civil/v4/.playwright-research/optixlog-section2/working-progress-50.png",
+      "details": {
+        "scrollY": 1800,
+        "labelNodes": [
+          {
+            "text": "Observation",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Distillation",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Context",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "700"
+          },
+          {
+            "text": "Control",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          }
+        ],
+        "activeHeading": "Context",
+        "activeBody": "Connect design, process, and test data into one system so teams can compare builds, trace failures, and query the full workflow with AI."
+      }
+    },
+    {
+      "point": 0.75,
+      "file": "/Users/vihangoenka/Projects/civil/v4/.playwright-research/optixlog-section2/working-progress-75.png",
+      "details": {
+        "scrollY": 2250,
+        "labelNodes": [
+          {
+            "text": "Observation",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Distillation",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Context",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "700"
+          },
+          {
+            "text": "Control",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          }
+        ],
+        "activeHeading": "Context",
+        "activeBody": "Connect design, process, and test data into one system so teams can compare builds, trace failures, and query the full workflow with AI."
+      }
+    },
+    {
+      "point": 1,
+      "file": "/Users/vihangoenka/Projects/civil/v4/.playwright-research/optixlog-section2/working-progress-100.png",
+      "details": {
+        "scrollY": 2700,
+        "labelNodes": [
+          {
+            "text": "Observation",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Distillation",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Context",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "400"
+          },
+          {
+            "text": "Control",
+            "color": "rgb(255, 255, 255)",
+            "opacity": "1",
+            "fontWeight": "700"
+          }
+        ],
+        "activeHeading": "Control",
+        "activeBody": "Keep engineering data inside your boundary, control who can access it, and govern how AI is used on top of sensitive design and process data."
+      }
+    }
+  ]
+}
