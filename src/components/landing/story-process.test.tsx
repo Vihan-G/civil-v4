@@ -122,6 +122,8 @@ describe("StoryProcess", () => {
     expect(source).toContain("debugFlags.fastTransitions ? 0.2 : 0.24");
     expect(source).toContain('brightness(0.4) saturate(0.3) blur(3px)');
     expect(source).toContain("const stackZIndex = isCap ? 50 : isActiveTile ? 40 : 9 + layer.zIndex;");
+    expect(source).toContain("const tileMotionTransition = {");
+    expect(source).toContain('className="absolute inset-0 rounded-[24px] bg-[#0E1016]"');
   });
 
   test("renders the right-column workflow copy block from activePhase", () => {
