@@ -19,7 +19,7 @@ export function LandingPage() {
       <main>
         <CinematicHero />
         <StatsStrip />
-        <StoryProcess />
+        {/* <StoryProcess /> — temporarily hidden, restoring later */}
         <LivePreviewSection />
         <FAQ />
         <FinalCTA material={material} />

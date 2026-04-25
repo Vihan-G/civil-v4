@@ -24,14 +24,32 @@ const specs = [
   ["Material", "Concrete C30/37"]
 ] as const;
 
+const previewColors = {
+  coral: "#c2615b",
+  grid:
+    "linear-gradient(to right, rgba(49,52,41,.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(49,52,41,.05) 1px, transparent 1px)",
+  success: "#4a7c59",
+  warning: "#b8842b"
+} as const;
+
 export function ProductPreview() {
   return (
-    <div className="overflow-hidden rounded-sm bg-paper shadow-vellum">
-      <div className="flex items-center gap-3 border-b border-ink/10 bg-surface px-4 py-2.5">
+    <div
+      className="overflow-hidden rounded-sm bg-paper shadow-[0_28px_32px_-12px_rgba(49,52,41,0.06)]"
+      style={{
+        ["--accent-rgb" as string]: "95 94 94",
+        ["--bg-elev-rgb" as string]: "251 249 242",
+        ["--bg-rgb" as string]: "245 244 235",
+        ["--border" as string]: "rgba(49,52,41,0.1)",
+        ["--fg-muted-rgb" as string]: "94 96 84",
+        ["--fg-rgb" as string]: "49 52 41"
+      }}
+    >
+      <div className="flex items-center gap-3 border-b border-[rgba(49,52,41,0.12)] bg-[#efeee3] px-4 py-2.5">
         <div className="flex gap-1.5" aria-hidden="true">
-          <span className="size-2.5 rounded-full bg-coral/70" />
-          <span className="size-2.5 rounded-full bg-warning/70" />
-          <span className="size-2.5 rounded-full bg-success/70" />
+          <span className="size-2.5 rounded-full" style={{ backgroundColor: previewColors.coral, opacity: 0.65 }} />
+          <span className="size-2.5 rounded-full" style={{ backgroundColor: previewColors.warning, opacity: 0.65 }} />
+          <span className="size-2.5 rounded-full" style={{ backgroundColor: previewColors.success, opacity: 0.65 }} />
         </div>
         <div className="min-w-0 flex-1 text-center font-mono text-[11px] text-muted">
           civilagent.com/project/<span className="text-ink">cornerstone-tower</span>/graph
@@ -64,7 +82,7 @@ function PreviewTopBar() {
           {topItems.map((item) => (
             <a
               className={cn(
-                "font-headline text-sm text-primary/80",
+                "font-headline text-sm text-[#5f5e5e]/70",
                 item === "Building Graph" && "border-b border-ink pb-1 text-ink"
               )}
               href="#preview"
@@ -78,13 +96,13 @@ function PreviewTopBar() {
 
       <div className="flex min-w-0 items-center gap-2">
         <div className="hidden min-h-9 items-center bg-surface-low px-3 md:flex">
-          <MaterialIcon className="mr-2 text-primary" name="search" size={17} />
+          <MaterialIcon className="mr-2 text-[#5f5e5e]" name="search" size={17} />
           <span className="w-36 truncate font-body text-sm text-muted">Search projects</span>
         </div>
         {["layers", "settings", "account_circle"].map((icon) => (
           <button
             aria-label={icon.replace("_", " ")}
-            className="hidden size-9 items-center justify-center rounded-sm text-primary transition hover:bg-surface-low sm:inline-flex"
+            className="hidden size-9 items-center justify-center rounded-sm text-[#5f5e5e] transition hover:bg-surface-low sm:inline-flex"
             key={icon}
             type="button"
           >
@@ -109,7 +127,7 @@ function SideNav() {
           return (
             <a
               className={cn(
-                "flex items-center gap-3 px-6 py-3 font-body text-xs font-medium uppercase text-primary transition",
+                "flex items-center gap-3 px-6 py-3 font-body text-xs font-medium uppercase text-[#5f5e5e] transition",
                 active && "bg-paper font-bold text-ink shadow-[inset_4px_0_0_#313429]",
                 !active && "hover:bg-paper/60"
               )}
@@ -128,8 +146,11 @@ function SideNav() {
 
 function GraphCanvas() {
   return (
-    <main className="relative min-h-[620px] overflow-hidden bg-paper bg-canvas-grid bg-[length:40px_40px]">
-      <div className="absolute left-4 right-4 top-4 z-20 flex flex-wrap justify-center gap-1 rounded-lg bg-surface-low/85 p-1 backdrop-blur-xl sm:left-1/2 sm:right-auto sm:-translate-x-1/2">
+    <main
+      className="relative min-h-[620px] overflow-hidden bg-paper bg-[length:40px_40px]"
+      style={{ backgroundImage: previewColors.grid }}
+    >
+      <div className="absolute left-4 right-4 top-4 z-20 flex flex-wrap justify-center gap-1 rounded-lg bg-[rgba(245,244,235,0.8)] p-1 shadow-[0_24px_32px_-12px_rgba(49,52,41,0.06)] backdrop-blur-xl sm:left-1/2 sm:right-auto sm:-translate-x-1/2">
         {["Walls", "Grid", "Rooms", "Columns", "Cores"].map((item) => {
           const active = item === "Walls" || item === "Columns";
           return (
@@ -153,7 +174,7 @@ function GraphCanvas() {
       </div>
 
       <div className="flex h-full min-h-[620px] items-center justify-center p-5 pt-24 sm:p-10 sm:pt-24">
-        <div className="relative flex aspect-[4/3] w-full max-w-4xl items-center justify-center bg-paper shadow-soft hairline">
+        <div className="relative flex aspect-[4/3] w-full max-w-4xl items-center justify-center bg-paper [border:0.5px_solid_rgba(49,52,41,0.1)]">
           <BuildingPlanSvg />
           <Legend />
         </div>
@@ -163,7 +184,7 @@ function GraphCanvas() {
         {["add", "remove", "center_focus_weak"].map((icon) => (
           <button
             aria-label={icon.replace("_", " ")}
-            className="flex size-9 items-center justify-center bg-paper text-ink shadow-soft hairline"
+            className="flex size-9 items-center justify-center bg-paper text-ink [border:0.5px_solid_rgba(49,52,41,0.1)]"
             key={icon}
             type="button"
           >
@@ -188,8 +209,8 @@ function SpecsPanel() {
           <Label>Completeness</Label>
           <span className="font-headline text-2xl font-bold text-ink">84.2%</span>
         </div>
-        <div className="h-1 bg-surface-highest">
-          <div className="h-full w-[84.2%] bg-teal" />
+        <div className="h-1 bg-[#e3e4d4]">
+          <div className="h-full w-[84.2%] bg-[#006a6a]" />
         </div>
         <p className="mt-3 font-body text-xs leading-5 text-muted">
           Validation references ASCE 7-22 seismic lateral force requirements.
@@ -201,7 +222,14 @@ function SpecsPanel() {
         {specs.map(([key, value]) => (
           <div className="flex justify-between gap-4 border-b border-ink/5 py-2.5" key={key}>
             <span className="font-body text-xs text-muted">{key}</span>
-            <span className="text-right font-headline text-xs font-medium text-ink">{value}</span>
+            <span
+              className={cn(
+                "text-right font-headline text-xs font-medium",
+                key === "Active Load Path" ? "text-[#006a6a]" : "text-ink"
+              )}
+            >
+              {value}
+            </span>
           </div>
         ))}
       </div>
@@ -213,7 +241,7 @@ function SpecsPanel() {
           "Foundation capacity assumes Class C soil profile."
         ].map((item) => (
           <div className="mb-3 flex items-start gap-2" key={item}>
-            <MaterialIcon className="mt-0.5 text-primary" name="info" size={15} />
+            <MaterialIcon className="mt-0.5 text-[#5f5e5e]" name="info" size={15} />
             <p className="m-0 font-body text-xs leading-5 text-muted">{item}</p>
           </div>
         ))}
@@ -309,7 +337,7 @@ function Legend() {
   ] as const;
 
   return (
-    <div className="absolute bottom-4 left-4 flex max-w-[calc(100%-4rem)] flex-col gap-1.5 bg-paper/80 p-2 backdrop-blur-xl sm:bottom-6 sm:left-6">
+    <div className="absolute bottom-4 left-4 flex max-w-[calc(100%-4rem)] flex-col gap-1.5 bg-[rgba(251,249,242,0.8)] p-2 backdrop-blur-xl sm:bottom-6 sm:left-6">
       {items.map(([color, label]) => (
         <div className="flex items-center gap-2" key={label}>
           <span className="size-2 rounded-full" style={{ backgroundColor: color }} />
